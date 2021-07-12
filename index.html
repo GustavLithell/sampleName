@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Playground</title>
+        <link href="index.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+
+            <button onclick="wasButtonClicked()">Click Me!</button>
+
+        <div class="cont-greeting">
+            <!-- first p is manipulated in js -->
+                <p>.cont-greeting</p>
+                <textarea></textarea>
+            </div>
+
+            <!-- DOM testing section -->
+            <p class="threeLines">DON'T SELECT THIS LINE</p>
+            <p class="threeLines">DON'T SELECT THIS LINE</p>
+            <p class="threeLines">DON'T SELECT THIS LINE</p>
+            <p>DON'T SELECT THIS LINE</p>
+            <p>SELECT THIS LINE</p>
+            <p>DON'T SELECT THIS LINE</p>
+        </main>
+
+        <!-- div for using .innerHTML & .insertAdjacentHTML() -->
+        <div class="content">
+            <p>we will add content in this div</p>
+        </div>
+
+        <!-- div for  people -->
+        <div class="people">
+            <p>people here:</p>
+        </div>
+        
+        <!-- section for bubbling testing -->
+        <div id="clickMe">
+            <section>Section
+                <h3>Click me!</h3>
+            </section>
+        </div>
+
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
