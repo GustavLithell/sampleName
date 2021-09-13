@@ -1,21 +1,64 @@
 
+
+// variable 
+
+// primitive variable types
+
+// structural data types
+
+
+
+const volvo = {
+  engine: {
+    producer: "some chinese company",
+    developmentYear: 2202,
+    horsePower: {
+      max: 300,
+      min: 250
+    }
+  }
+}
+
+const facebookUser = {
+  username: "Gustav Lithell",
+  dob: "07091992",
+  articleForMainPage: [
+    {title: "whatever",
+    postedByFriend: "Sam",
+    datePublished: "09077774"},
+
+    {title: "whatever",
+    postedByFriend: "Sam",
+    datePublished: "09077774"},
+
+    {title: "whatever",
+    postedByFriend: "Sam",
+    datePublished: "09077774"},
+
+    {title: "whatever",
+    postedByFriend: "Sam",
+    datePublished: "09077774"},
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // -------------------------------------------------------
 // THE FOR LOOP 
-// -------------------------------------------------------
-
-console.log("hey is it working")
-
-const num = true
-console.log(num)
-
-// -------------------------------------------------------
-// create variables
-// create function with name() {}
-
-// in the function add the ages
-// in the function console log our value 
-
-// call the function 
 // -------------------------------------------------------
 
 
@@ -276,11 +319,20 @@ console.log(num)
 // ON KEY DOWN EFFECT
 // -------------------------------------------------------
 
-// const body = document.querySelector('body')
+const body = document.querySelector('body')
 
-// body.addEventListener('keydown', (e) => {
-//     console.log(`Key "${e.key}" pressed`);
-// });
+body.addEventListener('keydown', (e) => {
+    console.log(`Key "${e.key}" pressed`);
+});
+
+
+
+
+
+
+
+
+
 
 // -------------------------------------------------------
 // FUNCTION DECLARATION
@@ -295,6 +347,13 @@ console.log(num)
 // -------------------------------------------------------
 // FUNCTION EXPRESSION
 // -------------------------------------------------------
+// in a function expression we can omit the function name to have anonymous functions i.e:
+// (function () {
+//   console.log("we didn't name this function")
+// })()
+
+
+// in the below example the function is also un named but the unnamed function is stored in a variable
 
 // const timeRightNow = 10
 
@@ -453,16 +512,28 @@ console.log(num)
 // MADE UP OF NODES (ROOT, ELEMENT, TEXT, ETC.)
 // WE USE QUERYING TO REACH INTO THE DOM AND CREATE REFERENCES TO DIFFERENT NODES
 
-// const para = document.querySelector('p')
+const para = document.querySelector('p')
+
+function changeMode() {
+  console.log(para.style)
+}
+
+changeMode()
 // // THIS WILL TARGET THE FIRST "p" FOUND IN THE DOCUMENT AND ASSIGN IT TO THE VARIABLE PARA
 
-// const targetedPara = document.querySelector("main p:nth-child(6)")
-// targetedPara.style.backgroundColor = "green"
+const targetedPara = document.querySelector("main p:nth-child(6)")
+targetedPara.style.backgroundColor = "green"
 // // RIGHT CLICK AND COPY "JS PATH" FOR A UNIQUE IDENTIFIER IN THE ELEMENTS TAB OF YOUR BROWSER
 
-// const paras = document.querySelectorAll('p.threeLine')
-// console.log(paras)
-// paras[3]
+document.querySelector("main > p:nth-child(5)")
+
+document.querySelector("#nav-access")
+
+document.querySelector(" main > div")
+
+const paras = document.querySelectorAll('p')
+console.log(paras)
+console.log(paras[3])
 // // THIS CONSOLE LOGS A NODE LIST 
 // // -WE CAN USE .forEach METHOD ON THIS (IS NODE LIST)
 // // -WE CAN TARGET A SPECIFIC QUERY VIA BRACKET NOTATION
@@ -483,30 +554,43 @@ console.log(num)
 // // -WE CAN TARGET A SPECIFIC QUERY VIA BRACKET NOTATION HERE AS WELL
 
 
-// const paragraphs = document.getElementsByTagName("p")
+const paragraphs = document.querySelectorAll("p")
 // console.log(paragraphs[6])
 // console.log(paragraphs)
 // // CAN ALSO SELECTED DOM ELEMENTS VIA THEIR TAG
 // // THIS GIVES US ANOTHER HTMLCOLLECTION SO WE CAN NOT USE .forEach METHOD ON THEM!
 
 
-
+// const h1 = document.querySelector("body > main > div.test > h1")
 // const textNode = document.createTextNode("Hello World")
-// paragraphs[6].appendChild(textNode)
-// console.log(paragraphs[6].nodeType)
+// paragraphs.forEach(p => {
+//   console.log(p)
+//   console.log(textNode)
+//   p.appendChild(textNode)})
+
+console.log(paragraphs[6].nodeType)
 // // A <p> IS AN ELEMENT NODE! ABOVE IS AN EXAMPLE OF A HOW 2 TEXT NODES ARE ATTACHED TO THE ELEMENT NODE
 
-// para.innerText = "have a great day everyone!"
+para.innerText = "have a great day everyone!"
 // // WE CAN USE .innerText TO ALTER THE TEXTNODE WITHIN AN ELEMENTS
 
-// para.textContent = "have a great day again!"
+para.textContent = "have a great day again!"; para.textContent += "addition text";
 // // WE CAN ALSO USE A TEXTCONTENT
 // // NOTE: TEXTCONTENT IS NOT AWARE OF TEXTSTYLING AND WILL EFFECT TEXT WHICH IS NOT HUMAN READABLE 
 // // AS WELL AS INCLUDING <SCRIPT> ELEMENTS 
 
-// paras.forEach(para => {
-//   para.innerText += "(added text)"
-// })
+paras.forEach(para => {
+  para.innerText += "(added text)"
+})
+
+11 == '11' // returns true
+
+(11 !== 12 || "hi" == "h0") // returns true
+
+
+paras.forEach(para => {
+  para.addEventListener("click", e => {console.log(e)})
+})
 // //WE CAN USE THE .forEach METHOD TO ALTER MULTIPLE TARGETED ELEMENTS
 // //NOTE: WE NEED TO USE THE NodeList NOT THE HTMLCollection
 
@@ -518,7 +602,6 @@ console.log(num)
 // content.insertAdjacentHTML("beforebegin", "<h2>This is the added content</h2>")
 // //CAN USE .insertAdjacentHTML TO INSERT HTML INSIDE (AT THE BEGINNING OR END OF AN ELEMENT) OR OUTSIDE
 // //(BEFORE OR AFTER AN ELEMENT) 
-
 
 
 // const people = ['mario', 'luigi', 'yoshi', 'peach']
@@ -708,16 +791,14 @@ console.log(num)
 // -------------------------------------------------------
 // EXAMPLE OF OBJECT
 // -------------------------------------------------------
-// let obj = { user: "happydude",
-// password: "klasdjlksaj",
-// years_as_member: 3,
-// years_subscribed: [2020, 2021],
-//             bestFriend: {
-//                 name: "sillydude",
-//                 age: 4
-//             }
-// }
+// let pokemon ={name: "Pikachu",
+//           id: 7,
+//           type: ["grass", "poison"],
+//           stats: {baseStats: {},
+//                   maxStats: {}}
+//           }
 
+// console.log(user.bestFriend.name)
 
 
 
@@ -1020,21 +1101,3 @@ console.log(num)
 // variable is like a boss it can change but it will always be the boss 
 
 
-
-function multiply(value1, value2) {
- console.log("value: "  + value1 * value2)
-}
-
-multiply(10, 5)
-
-
-
-
-const name = 'Gustav'
-
-function addUserName(userName) {
-  console.log("welcome back: " + userName)
-}
-
-
-addUserName(name)

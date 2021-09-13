@@ -4,6 +4,21 @@ body {
     background-color: lightgrey;
 }
 
+.test {
+    color: purple;
+}
+
+.display-none {
+    display: none;
+}
+
+.domTest p:nth-child(5){
+    background-color: #ff785a;
+}
+
+
+
+
 #clickMe {
     width: 100vw;
 }
