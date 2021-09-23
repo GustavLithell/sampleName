@@ -512,28 +512,28 @@ body.addEventListener('keydown', (e) => {
 // MADE UP OF NODES (ROOT, ELEMENT, TEXT, ETC.)
 // WE USE QUERYING TO REACH INTO THE DOM AND CREATE REFERENCES TO DIFFERENT NODES
 
-const para = document.querySelector('p')
+// const para = document.querySelector('p')
 
-function changeMode() {
-  console.log(para.style)
-}
+// function changeMode() {
+//   console.log(para.style)
+// }
 
-changeMode()
+// changeMode()
 // // THIS WILL TARGET THE FIRST "p" FOUND IN THE DOCUMENT AND ASSIGN IT TO THE VARIABLE PARA
 
-const targetedPara = document.querySelector("main p:nth-child(6)")
-targetedPara.style.backgroundColor = "green"
-// // RIGHT CLICK AND COPY "JS PATH" FOR A UNIQUE IDENTIFIER IN THE ELEMENTS TAB OF YOUR BROWSER
+// const targetedPara = document.querySelector("main p:nth-child(6)")
+// targetedPara.style.backgroundColor = "green"
+// // // RIGHT CLICK AND COPY "JS PATH" FOR A UNIQUE IDENTIFIER IN THE ELEMENTS TAB OF YOUR BROWSER
 
-document.querySelector("main > p:nth-child(5)")
+// document.querySelector("main > p:nth-child(5)")
 
-document.querySelector("#nav-access")
+// document.querySelector("#nav-access")
 
-document.querySelector(" main > div")
+// document.querySelector(" main > div")
 
-const paras = document.querySelectorAll('p')
-console.log(paras)
-console.log(paras[3])
+// const paras = document.querySelectorAll('p')
+// console.log(paras)
+// console.log(paras[3])
 // // THIS CONSOLE LOGS A NODE LIST 
 // // -WE CAN USE .forEach METHOD ON THIS (IS NODE LIST)
 // // -WE CAN TARGET A SPECIFIC QUERY VIA BRACKET NOTATION
@@ -554,7 +554,7 @@ console.log(paras[3])
 // // -WE CAN TARGET A SPECIFIC QUERY VIA BRACKET NOTATION HERE AS WELL
 
 
-const paragraphs = document.querySelectorAll("p")
+// const paragraphs = document.querySelectorAll("p")
 // console.log(paragraphs[6])
 // console.log(paragraphs)
 // // CAN ALSO SELECTED DOM ELEMENTS VIA THEIR TAG
@@ -568,29 +568,25 @@ const paragraphs = document.querySelectorAll("p")
 //   console.log(textNode)
 //   p.appendChild(textNode)})
 
-console.log(paragraphs[6].nodeType)
+// console.log(paragraphs[6].nodeType)
 // // A <p> IS AN ELEMENT NODE! ABOVE IS AN EXAMPLE OF A HOW 2 TEXT NODES ARE ATTACHED TO THE ELEMENT NODE
 
-para.innerText = "have a great day everyone!"
+// para.innerText = "have a great day everyone!"
 // // WE CAN USE .innerText TO ALTER THE TEXTNODE WITHIN AN ELEMENTS
 
-para.textContent = "have a great day again!"; para.textContent += "addition text";
+// para.textContent = "have a great day again!"; para.textContent += "addition text";
 // // WE CAN ALSO USE A TEXTCONTENT
 // // NOTE: TEXTCONTENT IS NOT AWARE OF TEXTSTYLING AND WILL EFFECT TEXT WHICH IS NOT HUMAN READABLE 
 // // AS WELL AS INCLUDING <SCRIPT> ELEMENTS 
 
-paras.forEach(para => {
-  para.innerText += "(added text)"
-})
-
-11 == '11' // returns true
-
-(11 !== 12 || "hi" == "h0") // returns true
+// paras.forEach(para => {
+//   para.innerText += "(added text)"
+// })
 
 
-paras.forEach(para => {
-  para.addEventListener("click", e => {console.log(e)})
-})
+// paras.forEach(para => {
+//   para.addEventListener("click", e => {console.log(e)})
+// })
 // //WE CAN USE THE .forEach METHOD TO ALTER MULTIPLE TARGETED ELEMENTS
 // //NOTE: WE NEED TO USE THE NodeList NOT THE HTMLCollection
 
@@ -1099,5 +1095,39 @@ paras.forEach(para => {
 
 
 // variable is like a boss it can change but it will always be the boss 
+
+
+
+
+
+// ----------------------------------------
+// Simple questions to understand Querying, AddEventListener & Basic Functions
+// ----------------------------------------
+
+// -------------------------------------------------------
+// 1)  Create a basic markup in html with some elements you can select.  Use js to save the DOM node element
+//     in a JS variable and then console.log it to make sure you are selecting the correct one.  Use both 
+//     getElementById() and querySelector() to target and save 2 different elements.
+//     Example output:
+//     <header class="target-element"></header>
+//     <p id="first-paragraph">
+// -------------------------------------------------------
+
+// -------------------------------------------------------
+// 2)  Use the addEventListener() method to provide a click listener to the element and a function that should execute
+//     when the div is click.  The function should preform a window.alter('the click worked!')
+//     Example output:
+//     This Page Said:
+//     click worked
+// -------------------------------------------------------
+
+// -------------------------------------------------------
+// 3)  Create a basic markup in html with some elements you can select.  Use js to save the DOM node element
+//     in a JS variable and then console.log it to make sure you are selecting the correct one.  Use both 
+//     getElementById() and querySelector() to target and save 2 different elements.
+//     Example output:
+//     <header class="target-element"></header>
+//     <p id="first-paragraph">
+// -------------------------------------------------------
 
 
